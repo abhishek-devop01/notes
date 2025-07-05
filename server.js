@@ -3,7 +3,13 @@ const app=express()
 app.use(express.json())
 
 let notes = []
+app.get('/', (req,res)=>{
+     res.send('Hello from backend')
+})
+app.get('/notes', (req,res)=>{
+     res.send('Hello from backend')
 
+})
 app.post('/notes', (req,res)=>{
      console.log(req.body);
      notes.push(req.body)
